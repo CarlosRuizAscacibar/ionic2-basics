@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { BuyoutPage } from '../buyout/buyout';
 
 @Component({
   selector: 'shop-page',
@@ -11,8 +12,10 @@ export class ShopPage {
   constructor(private navCtrl: NavController){
 
   }
-  onLoadBuyout(){
 
+
+  onLoadBuyout(name: string){
+    this.navCtrl.push(BuyoutPage, {buyoutName: name});
   }
 
 }
