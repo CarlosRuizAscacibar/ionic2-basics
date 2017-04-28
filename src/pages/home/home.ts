@@ -12,13 +12,11 @@ import { ShopPage } from '../shop/shop';
 })
 export class HomePage {
 
+  userPage = UsersPage;
   constructor(public navCtrl: NavController) {
 
   }
 
-  onGoToUsers(){
-    this.navCtrl.push(UsersPage);
-  }
   onGoToShop(){
     this.navCtrl.push(ShopPage);
   }
