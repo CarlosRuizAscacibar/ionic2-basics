@@ -12,4 +12,21 @@ export class UsersPage {
   onLoadUser(name: string){
     this.navCtrl.push(UserPage, {userName: name});
   }
+
+  ionViewCanEnter():boolean | Promise<boolean>{
+    console.log('ionViewCanEnter');
+    const rnd = Math.random();
+    return rnd > 0.05;
+  }
+
+  ionViewDidLoad(){
+    console.log('ionViewDidLoad');
+  }
+
+  ionViewCanLeave() : boolean | Promise<boolean>{
+    const promise = new Promise((resolve,reject) =>{
+      setTimeout(resolve,1000);
+    });
+    return promise;
+  }
 }
